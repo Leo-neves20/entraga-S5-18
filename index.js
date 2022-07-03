@@ -1,29 +1,46 @@
 
 let competidoresNomes = ["Rafael","Manoel","Daniel" ]
-let header = ["ESTE É O PÓDIO:"]
+let header = ["Este é o pódio"]
+let posiçãoDaniel = 0
 let resultado = []
 
+
 function positions(competidores){
+    
+       for(let i = 0; i < competidores.length; i++){
 
-        
-       if(competidores[0] != "Daniel"){
+           posiçãoDaniel = competidoresNomes.indexOf("Daniel")
 
-        resultado.push(("Rafael"))
-        resultado.push("Daniel")
-        resultado.push("Manoel")
+           if(posiçãoDaniel == 0){
 
-        
-       }else if(competidores[0] == "Daniel"){
-        
-        resultado.push("Daniel")
-        resultado.push("Rafael")
-        resultado.push("Manoel")
+              resultado.push("Lugar: Daniel") 
+              resultado.push("Lugar: Rafael")
+              resultado.push("Lugar: Manoel")
 
-        console.log("DANIEL É O VENCEDOR !!!")
+              console.log("Daniel é o vencedor")
+
+           }else if(posiçãoDaniel == 1){
+
+              resultado.push("Lugar: Daniel")
+              resultado.push("Lugar: Rafael")
+              resultado.push("Lugar: Manoel")
+
+              console.log("Daniel é o vencedor")
+
+           }else{
+
+              resultado.push("Lugar: Rafael")
+              resultado.push("Lugar: Daniel")
+              resultado.push("Lugar: Manoel")
+
+           }
+
+           
+
+           return header.concat(resultado)
 
        }
 
-       return  header.concat(resultado)
        
 }
 
